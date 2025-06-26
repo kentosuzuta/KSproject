@@ -34,4 +34,38 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
 # KSproject
+
+src/
+├── app/
+│ ├── layout.tsx ← 全体共通レイアウト（ヘッダー・フッターなど）
+│ ├── page.tsx ← トップページ（製品紹介、ヒーローエリアなど）
+│ ├── products/ ← 商品関連ページ
+│ │ ├── page.tsx ← 商品一覧ページ
+│ │ └── [id]/ ← 商品詳細（例: /products/iphone-15）
+│ │ └── page.tsx
+│ ├── cart/ ← カート画面
+│ │ └── page.tsx
+│ ├── checkout/ ← 購入手続き画面
+│ │ └── page.tsx
+│ └── account/ ← ユーザーアカウント関連
+│ ├── login/ ← ログイン画面
+│ │ └── page.tsx
+│ ├── register/ ← 新規登録画面
+│ │ └── page.tsx
+│ └── profile/ ← アカウント情報画面
+│ └── page.tsx
+├── components/ ← 再利用可能な UI コンポーネント（例: Header, ProductCard）
+├── features/ ← ドメインごとのロジック（例: cart, product などの Hooks や State）
+├── lib/ ← API 通信・ユーティリティ
+├── types/ ← 型定義（Product 型など）
+└── styles/ ← グローバル CSS, Tailwind 設定など
+
+Prettier - Code formatter
+
+Live Server
+
+Auto Rename Tag
+
+Es7+ React のスニペット(ショートカット)を使えるようにする
